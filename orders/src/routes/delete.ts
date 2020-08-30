@@ -29,12 +29,12 @@ router.delete(
 
     //Publishing an event to notify cancellation
 
-    // new OrderCancelledPublisher(natsWrapper.client).publish({
-    //   id: order.id,
-    //   ticket: {
-    //     id: order.ticket.id,
-    //   },
-    // });
+    new OrderCancelledPublisher(natsWrapper.client).publish({
+      id: order.id,
+      ticket: {
+        id: order.ticket.id,
+      },
+    });
 
     res.status(204).send(order);
   }

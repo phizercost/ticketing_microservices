@@ -16,4 +16,4 @@ jobs:
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       - run: doctl kubernetes cluster kubeconfig save do-sfo2-k8s-1-18-8-do-1-sfo2-1602887650476
-      - run: kubectl apply -f infra/k8s && kubectl apply -f infra/k8s-prod 
+      - run: kubectl apply -f infra/k8s && kubectl apply -f infra/k8s-prod
